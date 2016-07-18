@@ -10,7 +10,6 @@
     "gulp-css-globbing": "^0.1.8",
     "gulp-imagemin": "^3.0.1",
     "gulp-minify-css": "^1.2.4",
-    "gulp-notify": "*",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-sass-bulk-import": "^1.0.1",
