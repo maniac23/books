@@ -4,6 +4,84 @@
 @import "mixins.scss";
 @import "media.scss";
 
+
 .wrapper {
+  margin: 0 auto;
+}
+
+.main-header {
+  height: 100vh;// подумать над ограничением
+  position: relative;
+  padding: 150px 8.333%;
+  background-color: #000000;
+
+  &__background {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    min-height: auto;
+    display: block;
+    top: 0;
+    max-height: none;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  z-index: 2;
+  width: 100%;
   max-width: 1320px;
+  color: #ffffff;
+  text-align: center;
+
+  &__cover {
+    flex: 0 1 40%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    flex: 0 1 60%;
+    margin-left: 95px;
+  }
+
+  &__title {
+    font-family: "Calson224 Black Italic", Arial, sans-serif;
+    font-size: 5rem;
+    line-height: 1;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: $internal-margin-bottom;
+  }
+
+  &__subtitle {
+    font-family: "Calson224 Medium Italic", Arial, sans-serif;
+    font-size: 3rem;
+    line-height: 1.25;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    margin-bottom: $internal-margin-bottom;
+  }
+
+  &__author {
+    font-family: "Calson224 Book Italic", Arial, sans-serif;
+    font-size: 1.875rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    margin-bottom: $internal-margin-bottom;
+  }
+
 }
