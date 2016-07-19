@@ -10,78 +10,449 @@
 }
 
 .main-header {
-  height: 100vh;// подумать над ограничением
   position: relative;
-  padding: 150px 8.333%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-bottom: $external-margin;// подумать над ограничением
+
   background-color: #000000;
 
   &__background {
-    z-index: 1;
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: block;
+    width: 100%;
     height: 100%;
     min-height: auto;
-    display: block;
-    top: 0;
     max-height: none;
-    left: 0;
-    width: 100%;
     overflow: hidden;
   }
 }
 
-.book {
+.row {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+
+  text-align: center;
+}
+
+.book {
   position: relative;
   z-index: 2;
-  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   max-width: 1320px;
-  color: #ffffff;
+  margin: $external-margin 6.979%;
+
   text-align: center;
+  color: #ffffff;
 
   &__cover {
-    flex: 0 1 40%;
+    flex: 1 1 40%;
+    margin-right: 47px;
   }
 
   &__img {
-    width: 100%;
+    max-width: 100%;
   }
 
   &__content {
-    flex: 0 1 60%;
-    margin-left: 95px;
+    display: flex;
+    flex: 1 1 60%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 47px;
   }
 
   &__title {
-    font-family: "Calson224 Black Italic", Arial, sans-serif;
+    margin: 0;
+    margin-bottom: $internal-margin-bottom;
+    padding: 0;
+
+    font-weight: 400;
     font-size: 5rem;
     line-height: 1;
+    font-family: "Calson224 Black Italic", Arial, sans-serif;
     font-style: italic;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    margin-bottom: $internal-margin-bottom;
+    letter-spacing: 2px;
   }
 
   &__subtitle {
-    font-family: "Calson224 Medium Italic", Arial, sans-serif;
+    margin: 0;
+    margin-bottom: $internal-margin-bottom;
+    padding: 0;
+
+    font-weight: 300;
     font-size: 3rem;
     line-height: 1.25;
-    font-weight: 300;
+    font-family: "Calson224 Medium Italic", Arial, sans-serif;
     font-style: italic;
-    margin: 0;
-    padding: 0;
-    margin-bottom: $internal-margin-bottom;
+    letter-spacing: 1.2px;
   }
 
   &__author {
-    font-family: "Calson224 Book Italic", Arial, sans-serif;
+    margin: 0;
+    margin-bottom: $internal-margin-bottom;
+    padding: 0;
+
     font-size: 1.875rem;
     line-height: 1;
-    margin: 0;
-    padding: 0;
-    margin-bottom: $internal-margin-bottom;
+    font-family: "Calson224 Book Italic", Arial, sans-serif;
+    letter-spacing: 0.75px;
+  }
+}
+
+.resellers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    display: inline-block;
+    width: 195px;
+    margin-bottom: 30px;
+
+    font-size: 1.375rem;
+    line-height: 1.3;
+    font-family: "Suisse Condensed Medium", Arial, sans-serif;
+    letter-spacing: 1.1px;
+
+    opacity: 0.45;
+  }
+}
+
+.btn {
+  position: relative;
+
+  display: inline-block;
+
+  border: 2px solid #ffffff;
+  border-radius: 40px;
+
+  transition: all 0.5s ease;
+
+  &--reseller {
+    margin-bottom: 30px;
+    width: 195px;
+    height: 65px;
+    background: transparent url("../img/reseller_sprite.png") no-repeat;
+
+    transition: all 0.5s ease;
+    opacity: 0.45;
+
+    &:hover {
+      background-color: #ffffff;
+      opacity: 1;
+    }
   }
 
+  &--amazon {
+    background-position: 50% -46px;
+
+    &:hover {
+      background-position: 50% 20px;
+    }
+
+    &-inactive {
+      order: 1;
+
+      &:hover {
+        background-color: transparent;
+        background-position: 50% -46px;
+        cursor: default;
+        opacity: 0.45;
+      }
+
+      &::after {
+        content: "coming soon";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+
+        font-size: 0.75rem;
+        line-height: 1.3;
+        font-family: "Suisse Condensed Light", Arial, sans-serif;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &--ibooks {
+    background-position: 50% -438px;
+
+    &:hover {
+      background-position: 50% -373px;
+    }
+
+    &-inactive {
+      order: 1;
+
+      &:hover {
+        background-color: transparent;
+        background-position: 50% -438px;
+        cursor: default;
+        opacity: 0.45;
+      }
+
+      &::after {
+        content: "coming soon";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+
+        font-size: 0.75rem;
+        line-height: 1.3;
+        font-family: "Suisse Condensed Light", Arial, sans-serif;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &--bn {
+    background-position: 50% -178px;
+
+    &:hover {
+      background-position: 50% -112px;
+    }
+
+    &-inactive {
+      order: 1;
+
+      &:hover {
+        background-color: transparent;
+        background-position: 50% -178px;
+        cursor: default;
+        opacity: 0.45;
+      }
+
+      &::after {
+        content: "coming soon";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+
+        font-size: 0.75rem;
+        line-height: 1.3;
+        font-family: "Suisse Condensed Light", Arial, sans-serif;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &--google {
+    background-position: 50% -306px;
+
+    &:hover {
+      background-position: 50% -242px;
+    }
+
+    &-inactive {
+      order: 1;
+
+      &:hover {
+        background-color: transparent;
+        background-position: 50% -306px;
+        cursor: default;
+        opacity: 0.45;
+      }
+
+      &::after {
+        content: "coming soon";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+
+        font-size: 0.75rem;
+        line-height: 1.3;
+        font-family: "Suisse Condensed Light", Arial, sans-serif;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &--kobo {
+    background-position: 50% -566px;
+
+    &:hover {
+      background-position: 50% -498px;
+    }
+
+    &-inactive {
+      order: 1;
+
+      &:hover {
+        background-color: transparent;
+        background-position: 50% -566px;
+        cursor: default;
+        opacity: 0.45;
+      }
+
+      &::after {
+        content: "coming soon";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+
+        font-size: 0.75rem;
+        line-height: 1.3;
+        font-family: "Suisse Condensed Light", Arial, sans-serif;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &--share {
+    font-family: "Suisse Condensed", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.3;
+    color: #ffffff;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 25px 40px 25px 40px;
+    text-transform: uppercase;
+    border: none;
+    margin-bottom: 5px;
+
+
+    &-fb {
+      background-color: #3b5998;
+
+      &::after {
+        content: " ";
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 15px;
+        width: 20px;
+        height: 21px;
+        background: url("../img/icon_sprite.png") no-repeat;
+        background-position: 0 -49px;
+      }
+    }
+
+
+    &-twitter {
+      background-color: #00aced;
+
+      &::after {
+        content: " ";
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 15px;
+        width: 20px;
+        height: 21px;
+        background: url("../img/icon_sprite.png") no-repeat;
+        background-position: 0 -80px;
+      }
+    }
+
+    &-email {
+      background-color: #26ca96;
+
+      &::after {
+        content: " ";
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 15px;
+        width: 23px;
+        height: 20px;
+        background: url("../img/icon_sprite.png") no-repeat;
+        background-position: 0 -13px;
+      }
+
+    }
+  }
+}
+
+main {
+  margin: 0 25.33%;
+  max-width: 780px;
+}
+
+.content {
+  margin-bottom: $external-margin;
+
+  p {
+    font-family: "Calson Regular", Arial, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: $internal-margin-bottom;
+    padding: 0;
+    text-align: justify;
+  }
+
+  p:first-child {
+    font-family: "Calson224 Bold Italic", Arial, sans-serif;
+    font-size: 1.875rem;
+    line-height: 1.3;
+    font-weight: bold;
+    margin-bottom: $internal-margin-bottom * 2;
+  }
+}
+
+.share {
+  text-align: center;
+  margin-bottom: $external-margin;
+
+  &__title {
+    font-family: "Suisse Condensed Medium", Arial, sans-serif;
+    font-size: 1.0625rem;
+    font-weight: medium;
+    line-height: 1.5;
+    color: #fcdb00;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    margin-bottom: $internal-margin-bottom * 2;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 50px;
+      background-color: #fcdb00;
+      bottom: $internal-margin-bottom * -1;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.author {
+  text-align: center;
+
+  &__title {
+    @extend .share__title;
+  }
 }

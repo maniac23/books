@@ -45,7 +45,7 @@ var config = {
   server: {
     baseDir: '.'
   },
-  tunnel: false,
+  tunnel: true,
   host: 'localhost',
   port: 9000,
   logPrefix: 'Maniac'
