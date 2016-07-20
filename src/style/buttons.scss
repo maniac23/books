@@ -211,6 +211,14 @@
     margin-bottom: 5px;
     border: 2px solid transparent;
 
+    @media only screen and (max-width: 1280px) {
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+    }
+
     &-fb {
       background-color: #3b5998;
 
@@ -285,6 +293,14 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @media only screen and (max-width: 980px) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width: 480px) {
+      width: 100%;
     }
   }
 }
