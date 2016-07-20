@@ -6,6 +6,7 @@
 
     &__img {
       width: 400px;
+
       object-fit: cover;
     }
 
@@ -15,8 +16,8 @@
     }
 
     &__content {
-      margin-left: 0;
       margin-bottom: $internal-margin-bottom;
+      margin-left: 0;
     }
   }
 }

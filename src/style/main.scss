@@ -10,6 +10,7 @@
 
 .main-header {
   position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -128,57 +129,64 @@
 }
 
 main {
-  margin: 0 25.33%;
   max-width: 780px;
+  margin: 0 25.33%;
 }
 
 .content {
   margin-bottom: $external-margin;
 
   p {
-    font-family: "Calson Regular", Arial, sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-weight: 400;
     margin: 0;
     margin-bottom: $internal-margin-bottom;
     padding: 0;
+
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: "Calson Regular", Arial, sans-serif;
     text-align: justify;
   }
 
   p:first-child {
-    font-family: "Calson224 Bold Italic", Arial, sans-serif;
+    margin-bottom: $internal-margin-bottom * 2;
+
+    font-weight: bold;
     font-size: 1.875rem;
     line-height: 1.3;
-    font-weight: bold;
-    margin-bottom: $internal-margin-bottom * 2;
+    font-family: "Calson224 Bold Italic", Arial, sans-serif;
   }
 }
 
 .share {
-  text-align: center;
   margin-bottom: $external-margin;
 
+  text-align: center;
+
   &__title {
-    font-family: "Suisse Condensed Medium", Arial, sans-serif;
-    font-size: 1.0625rem;
+    position: relative;
+
+    margin: 0;
+    margin-bottom: $internal-margin-bottom * 2;
+    padding: 0;
+
     font-weight: medium;
+    font-size: 1.0625rem;
     line-height: 1.5;
+    font-family: "Suisse Condensed Medium", Arial, sans-serif;
     color: #fcdb00;
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    margin-bottom: $internal-margin-bottom * 2;
-    position: relative;
 
     &::after {
       content: "";
       position: absolute;
-      height: 1px;
-      width: 50px;
-      background-color: #fcdb00;
       bottom: $internal-margin-bottom * -1;
       left: 50%;
+
+      width: 50px;
+      height: 1px;
+
+      background-color: #fcdb00;
       transform: translateX(-50%);
     }
   }
@@ -192,9 +200,9 @@ main {
   }
 
   &__name {
-    font-family: "Calson224 Book Italic", Arial, sans-serif;
     font-size: 30px;
     line-height: 1;
+    font-family: "Calson224 Book Italic", Arial, sans-serif;
   }
 
   &__social {
@@ -202,14 +210,15 @@ main {
   }
 
   &__link {
-    color: #0c6ffb;
-    font-family: "Suisse Condensed", Arial, sans-serif;
+    position: relative;
+
+    font-weight: 400;
     font-size: 17px;
     line-height: 1.3;
-    font-weight: 400;
+    font-family: "Suisse Condensed", Arial, sans-serif;
+    color: #0c6ffb;
     text-transform: uppercase;
     text-decoration: none;
-    position: relative;
 
     &:hover {
       text-decoration: underline;
@@ -220,14 +229,16 @@ main {
 
       &::after {
         content: "";
-        display: inline-block;
-        margin-left: 17px;
-        width: 10px;
-        height: 10px;
-        background-color: #aed7ff;
-        border-radius: 50%;
         position: absolute;
         top: 50%;
+
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-left: 17px;
+
+        background-color: #aed7ff;
+        border-radius: 50%;
         transform: translateY(-50%);
       }
     }
@@ -236,21 +247,24 @@ main {
 
 .main-footer {
   padding-bottom: 120px;
+
   text-align: center;
 
   &__copyright {
-    font-family: "Calson224 Bold";
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    font-weight: 400;
     font-size: 1.3125rem;
     line-height: 1.3;
-    color: #26161c;
-    font-weight: 400;
-    display: inline-block;
+    font-family: "Calson224 Bold";
     vertical-align: middle;
-    padding: 0;
-    margin: 0;
+    color: #26161c;
 
     img {
       display: inline-block;
+
       vertical-align: text-top;
     }
   }

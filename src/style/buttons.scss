@@ -9,13 +9,14 @@
   transition: all 0.5s ease;
 
   &--reseller {
-    margin-bottom: 30px;
     width: 195px;
     height: 65px;
+    margin-bottom: 30px;
+
     background: transparent url("../img/reseller_sprite.png") no-repeat;
+    opacity: 0.45;
 
     transition: all 0.5s ease;
-    opacity: 0.45;
 
     &:hover {
       background-color: #ffffff;
@@ -199,16 +200,18 @@
   }
 
   &--share {
-    font-family: "Suisse Condensed", Arial, sans-serif;
+    width: 30%;
+    margin-bottom: 5px;
+    padding: 20px 0;
+
     font-size: 1.0625rem;
     line-height: 1.3;
-    color: #ffffff;
-    text-decoration: none;
+    font-family: "Suisse Condensed", Arial, sans-serif;
     vertical-align: middle;
-    padding: 20px 0;
-    width: 30%;
+    color: #ffffff;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    text-decoration: none;
+
     border: 2px solid transparent;
 
     @media only screen and (max-width: 1280px) {
@@ -228,11 +231,14 @@
 
       &::after {
         content: " ";
+
         display: inline-block;
-        vertical-align: top;
-        margin-left: 10px;
         width: 20px;
         height: 21px;
+        margin-left: 10px;
+
+        vertical-align: top;
+
         background: url("../img/icon_sprite.png") no-repeat;
         background-position: 0 -49px;
       }
@@ -248,11 +254,14 @@
 
       &::after {
         content: " ";
+
         display: inline-block;
-        vertical-align: top;
-        margin-left: 15px;
         width: 20px;
         height: 21px;
+        margin-left: 15px;
+
+        vertical-align: top;
+
         background: url("../img/icon_sprite.png") no-repeat;
         background-position: 0 -80px;
       }
@@ -267,29 +276,33 @@
 
       &::after {
         content: " ";
+
         display: inline-block;
-        vertical-align: top;
-        margin-left: 15px;
         width: 23px;
         height: 20px;
+        margin-left: 15px;
+
+        vertical-align: top;
+
         background: url("../img/icon_sprite.png") no-repeat;
         background-position: 0 -13px;
       }
-
     }
   }
 
   &--author {
-    color: #0c6ffb;
-    font-family: "Suisse Condensed", Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.3;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 20px 0;
-    border: 2px solid #0c6ffb;
     width: 50%;
     margin-bottom: 15px;
+    padding: 20px 0;
+
+    font-size: 17px;
+    line-height: 1.3;
+    font-family: "Suisse Condensed", Arial, sans-serif;
+    color: #0c6ffb;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border: 2px solid #0c6ffb;
 
     &:hover {
       text-decoration: underline;
